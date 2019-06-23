@@ -1,6 +1,5 @@
 #!/bin/sh
-# Created by https://www.hostingtermurah.net
-# Modified by 0123456
+# Created by M Fauzan Romandhoni
 
 #Requirement
 if [ ! -e /usr/bin/curl ]; then
@@ -90,7 +89,7 @@ echo "screenfetch" >> .profile
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-cat > /etc/nginx/nginx.conf <<END3
+cat > /etc/nginx/nginx.conf <<-END3
 user www-data;
 
 worker_processes 1;
@@ -137,7 +136,7 @@ args='$args'
 uri='$uri'
 document_root='$document_root'
 fastcgi_script_name='$fastcgi_script_name'
-cat > /etc/nginx/conf.d/vps.conf <<END4
+cat > /etc/nginx/conf.d/vps.conf <<-END4
 server {
   listen       85;
   server_name  127.0.0.1 localhost;
